@@ -1,0 +1,42 @@
+import { styled } from "@mui/material";
+
+export const ListaStyled = styled("ul")`
+        width: 100%;
+        max-width:800px;
+        margin: 0 auto;
+        padding: ${({theme})=>theme.spacing(2)};
+        list-style: none;
+`;
+
+export const ItemLista = styled("li")`
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: ${({theme})=>theme.spacing(5)};
+      margin-bottom: ${({theme})=>theme.spacing(5)};
+
+      ${({theme})=>theme.breakpoints.down("md")}{
+        grid-template-columns: 1fr ;
+        gap: ${({theme})=>theme.spacing(2)};
+        margin-bottom: ${({theme})=>theme.spacing(5)};
+      }
+`;
+
+export const Foto = styled("img")`
+  width: 100%;
+  height: auto;
+`;
+
+export const Info = styled ("div")`
+    display:flex;
+    flex-direction: column;
+    gap: ${({theme})=>theme.spacing(2)};
+`;
+
+export const Nome = styled ("h2")`
+      margin:0;
+`;
+
+export const Descricao = styled("p")`
+      margin:0;
+      word-break: break-word;
+`;
